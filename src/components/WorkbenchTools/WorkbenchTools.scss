@@ -1,0 +1,278 @@
+@import "../../styles/util/colors.scss";
+
+.workbench-tools {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: $grey;
+  margin-bottom: 3rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    cursor: default;
+    display: block;
+    color: $onyx;
+    margin: 1rem 0;
+  }
+
+  &__type-buttons {
+    display: flex;
+  }
+
+  &__add-button {
+    outline: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: $white;
+    border-radius: 0;
+    background: $onyx;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms;
+    margin-right: 2rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__annotations-container {
+    position: absolute;
+    top: 12.1rem;
+    left: 85rem;
+    background: $white;
+    width: 28rem;
+    height: auto;
+  }
+
+  @media (max-width: 70rem) {
+    &__annotations-container {
+      position: relative;
+      top: 1rem;
+      left: 0;
+      display: flex;
+      padding: 1rem 0 0 0;
+      width: auto;
+      max-width: 80rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__annotations-title {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: $onyx;
+    margin: 0;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+
+  &__annotation-item {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0.5rem 1rem;
+    color: $onyx;
+  }
+
+  &__category-container {
+    padding: 1rem;
+  }
+
+  &__new-category-button {
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: $white;
+    border-radius: 0;
+    background: $onyx;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__category-select {
+    color: $white;
+    background: $onyx;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    text-align: center;
+    height: 2.4rem;
+    outline: none;
+    padding: 0 0.7rem;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__annotation-hash {
+    pointer-events: none;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    color: $white;
+    font-size: 2rem;
+  }
+
+  &__popup {
+    margin: 8rem auto;
+    padding: 2rem;
+    background: $white;
+    width: 24rem;
+    position: relative;
+    z-index: 250;
+  }
+
+  &__popup-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+    opacity: 1;
+    z-index: 200;
+  }
+
+  &__popup-title {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: $onyx;
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+
+  &__popup-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__popup-text {
+    margin-bottom: 2rem;
+  }
+
+  &__popup-name-input {
+    border: 2px solid $onyx;
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    outline: none;
+  }
+
+  &__popup-submit-button {
+    outline: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: $white;
+    border-radius: 0;
+    background: $onyx;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms;
+    width: 8rem;
+    margin-top: 1rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+
+  &__popup-category-preview {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  &__popup-category-preview > span {
+    max-width: 16rem;
+    word-break: break-all;
+    margin: 1rem 0;
+  }
+
+  &__popup-close {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0.6;
+    transition: all 200ms;
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: $onyx;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.interactive {
+  position: absolute;
+  min-width: 6rem;
+  min-height: 6rem;
+  background-color: #000;
+  opacity: 0.7;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 2px dashed #fff;
+  cursor: move;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &::before {
+    content: "\21F2";
+    font-size: 3rem;
+    cursor: all-scroll;
+    color: #fff;
+    position: absolute;
+    bottom: 0rem;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    box-sizing: border-box;
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    line-height: 0.5;
+    transition: all 200ms;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+  &::before:hover {
+    background: transparent;
+  }
+}

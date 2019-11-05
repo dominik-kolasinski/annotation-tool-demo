@@ -1,0 +1,33 @@
+@import "../../styles/util/colors.scss";
+
+.file-upload {
+  width: 100%;
+  background-color: #353839;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.3rem;
+
+  &__input {
+    &::-webkit-file-upload-button {
+      width: 100%;
+      color: $white;
+      z-index: 100;
+      outline: none;
+      padding: 0.5rem 1rem;
+      font-size: 1.6rem;
+      border-radius: 0;
+      background-color: $onyx;
+
+      border: none;
+      cursor: pointer;
+      transition: all 200ms;
+
+      &:hover {
+        opacity: 0.8;
+        color: $onyx;
+        background-color: $white;
+      }
+    }
+  }
+}

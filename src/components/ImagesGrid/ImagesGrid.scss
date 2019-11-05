@@ -1,0 +1,14 @@
+.images-grid {
+  display: flex;
+  width: 106rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+@media (max-width: 106rem) {
+  .images-grid {
+    width: 100%;
+  }
+}

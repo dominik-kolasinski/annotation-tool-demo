@@ -1,0 +1,21 @@
+@import "./util/colors.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-size: 1.6rem;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: $grey;
+}
+
+main {
+  background: white;
+}

@@ -1,0 +1,25 @@
+@import "../../styles/util/colors.scss";
+
+.not-found-page {
+  background-color: transparent;
+  font-size: 2.2rem;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+    cursor: pointer;
+    color: $white;
+    background-color: $onyx;
+    padding: 1rem;
+    margin-top: 2rem;
+    transition: all 200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
